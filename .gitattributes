@@ -1,5 +1,10 @@
 # 自动处理文本文件，提交时统一为 LF，检出时自动转换为 CRLF
 * text=auto
 
+# 明确指定特定文件的行结束符
+*.{sh,ksh,bash,zsh} text eol=lf      # Shell脚本（必须使用LF）
+*.{py,js,ts,html,css,json,yaml,md} text eol=lf  # 代码和文档（统一LF）
+*.{cmd,bat,powershell} text eol=crlf  # Windows脚本（必须使用CRLF）
+
 # 二进制文件（避免Git尝试转换）
 *.{png,jpg,gif,svg,pdf,exe,zip} binary

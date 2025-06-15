@@ -8,5 +8,8 @@ services:
       - ./browser_cookies.json:/app/browser_cookies.json  # 挂载 cookies 文件
     environment:
       - TZ=America/Toronto  # 设置时区
+      - PYTHONUNBUFFERED=1  # 确保 Python 输出不被缓存
     stdin_open: true  # 允许交互式输入
-    tty: true  # 分配一个伪终端 
+    tty: true  # 分配一个伪终端
+    command: python -u scraper.py  # 使用 -u 参数运行 Python
+ 
