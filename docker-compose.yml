@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  scraper:
+    build: .
+    volumes:
+      - ./data:/data  # 挂载数据目录
+      - ./browser_cookies.json:/app/browser_cookies.json  # 挂载 cookies 文件
+    environment:
+      - TZ=America/Toronto  # 设置时区
+    stdin_open: true  # 允许交互式输入
+    tty: true  # 分配一个伪终端 
