@@ -26,7 +26,7 @@ logging.basicConfig(
 )
 
 # Path to your Microsoft Edge WebDriver
-edgedriver_path = 'msedgedriver.exe'
+edgedriver_path = 'msedgedriver'
 
 # Load cookies from file
 def load_cookies():
